@@ -13,9 +13,14 @@ function mostrarResultadoCalculado(parte) {
 
         case 'b':
             const numerosB = parseTextInput(document.getElementById("numerosB").value);
-            const numerosRevertidos = numerosB.reverse();
 
-            resultado = { numerosB, numerosRevertidos };
+            // Criar uma cópia do array original
+            const arrayRevertido = [...numerosB];
+
+            // Reverter a cópia
+            arrayRevertido.reverse();
+
+            resultado = { numerosB, arrayRevertido };
             document.getElementById("resultadoB").textContent = JSON.stringify(resultado, null, 2);
             break;
 
