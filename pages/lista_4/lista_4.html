@@ -1,72 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Simple Sidebar - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="lista_4.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="d-flex" id="wrapper">
-            <!-- Sidebar-->
-            <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
-                </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Lista 4</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../pages.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav">
+        <div class="container px-4">
+            <div class="fs-4 mb-2">
+                <a class="navbar-brand" href="../../index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-house-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                        <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+                    </svg>
+                    Início
+                </a>
             </div>
-            <!-- Page content wrapper-->
-            <div id="page-content-wrapper">
-                <!-- Top navigation-->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">Colapsar Menu</button>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="../../index.html">Início</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#!">Action</a>
-                                        <a class="dropdown-item" href="#!">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#!">Something else here</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                <!-- Page content-->
-                <div class="container-fluid">
-                    <h1 class="mt-4">Simple Sidebar</h1>
-                    <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-                    <p>
-                        Make sure to keep all page content within the
-                        <code>#page-content-wrapper</code>
-                        . The top navbar is optional, and just for demonstration. Just create an element with the
-                        <code>#sidebarToggle</code>
-                        ID which will toggle the menu when clicked.
-                    </p>
-                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+    <!-- Pagination -->
+    <div class="container px-12 px-lg-5 mt-lg-5">
+        <h1 class="text-center">Lista 4 - JSON</h1>
+        <!-- <nav aria-label="Exercise navigation">
+            <ul id="pagination" class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span class="sr-only">Próximo</span>
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav> -->
+        <section id="section-a" class="section-questao">
+            <h2>Parte a:</h2>
+            <div class="inputContainer">
+                <label for="vetorA">Digite números separados por espaço:</label>
+                <input type="text" id="vetorA" />
+            </div>
+            <div class="inputContainer">
+                <label for="numX">Digite o valor de X:</label>
+                <input type="text" id="numX" />
+            </div>
+            <button onclick="mostrarResultadoCalculado('a')">Calcular</button>
+            <p>Resultado:</p>
+            <pre id="resultadoA"></pre>
+        </section>
+
+        <!-- Parte 'b' -->
+        <section id="section-b" class="section-questao">
+            <h2>Parte b:</h2>
+            <div class="inputContainer">
+                <label for="numerosB">Digite números separados por espaço:</label>
+                <input type="text" id="numerosB" />
+            </div>
+            <button onclick="mostrarResultadoCalculado('b')">Calcular</button>
+            <p>Resultado:</p>
+            <pre id="resultadoB"></pre>
+        </section>
+
+        <!-- Parte 'c' -->
+        <section id="section-c" class="section-questao">
+            <h2>Parte c:</h2>
+            <div class="inputContainer">
+                <label for="notasAlunos">Digite as notas dos alunos separadas por espaço:</label>
+                <input type="text" id="notasAlunos" />
+            </div>
+            <button onclick="mostrarResultadoCalculado('c')">Calcular</button>
+            <p>Resultado:</p>
+            <pre id="resultadoC"></pre>
+        </section>
+
+        <!-- Parte 'd' -->
+        <section id="section-d" class="section-questao">
+            <h2>Parte d:</h2>
+            <div class="inputContainer mercadoria-container">
+                <p>Insira as informações das mercadorias:</p>
+                <div id="mercadorias-container" class="mercadoria-input-container">
+                    <!-- O campo de entrada para a primeira mercadoria -->
+                    <div id="1mercadoria" class="mercadoria">
+                        <div class="row-input-valores">
+                            <div class="input-field">
+                                <label for="valorMercadoria" class="input-label-mercadoria">Valor:</label>
+                                <input type="number" class="valorMercadoria input-mercadoria" min="1" required />
+                            </div>
+                            <div class="input-field">
+                                <label for="quantidadeMercadoria" class="input-label-mercadoria">Quantidade:</label>
+                                <input type="number" class="quantidadeMercadoria input-mercadoria" min="1" required />
+                            </div>
+                            <button id="1botaoRemover" class="removerMercadoria">Remover</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="adicionarMercadoria" onclick="adicionarMercadoria()">Adicionar Mercadoria</button>
+            </div>
+            <button onclick="mostrarResultadoCalculado('d')">Calcular</button>
+            <p>Resultado:</p>
+            <pre id="resultadoD"></pre>
+        </section>
+
+        <!-- Parte 'e' -->
+        <section id="section-e" class="section-questao">
+            <h2>Parte e:</h2>
+            <div class="inputContainer">
+                <label for="vetorV1">Digite números separados por espaço para o vetor 1:</label>
+                <input type="text" id="vetorV1" />
+            </div>
+            <div class="inputContainer">
+                <label for="vetorV2">Digite números separados por espaço para o vetor 2:</label>
+                <input type="text" id="vetorV2" />
+            </div>
+            <button onclick="mostrarResultadoCalculado('e')">Calcular</button>
+            <p>Resultado:</p>
+            <pre id="resultadoE"></pre>
+        </section>
+    </div>
+
+    <!-- Footer-->
+    <footer class="py-4 bg-dark fixed-bottom">
+        <div class="container px-4 px-lg-5">
+            <p class="m-0 text-center text-white">Copyright &copy; Pablo Vinicius 2023</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../../js/scripts.js"></script>
+    <!-- Scripts dos cálculos -->
+    <script src="scripts.js"></script>
+</body>
+
 </html>
