@@ -89,19 +89,7 @@ function adicionarMercadoria() {
     const mercadoriasContainer = document.getElementById("mercadorias-container");
     const novaMercadoria = document.createElement("div");
     novaMercadoria.className = "mercadoria";
-    novaMercadoria.innerHTML = `
-    <div class="row-input-valores">
-      <div class="input-field">
-        <label for="valorMercadoria" class="input-label-mercadoria">Valor:</label>
-        <input type="number" class="valorMercadoria input-mercadoria" min="1" required/>
-      </div>
-      <div class="input-field">
-        <label for="quantidadeMercadoria" class="input-label-mercadoria">Quantidade:</label>
-        <input type="number" class="quantidadeMercadoria input-mercadoria" min="1" required/>
-      </div>
-      <button id="1botaoRemover" class="removerMercadoria">Remover</button>
-    </div>
-    `;
+    novaMercadoria.innerHTML = mercadoria1.innerHTML; // pega o código html todo da primeira mercadoria para depois duplicar
     mercadoriasContainer.appendChild(novaMercadoria);
 
     // Adicionar um ouvinte de evento ao botão de remoção para a nova mercadoria

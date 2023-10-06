@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Lista 4</title>
@@ -11,17 +13,18 @@
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../pages.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand mx-2" href="../../index.html">
-                Início
-            </a>
-        </div>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand mx-2" href="../../index.html"> Início </a>
+      </div>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -31,100 +34,229 @@
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div> -->
-        </div>
     </nav>
 
     <!-- Page Content -->
     <div class="container px-12 px-lg-5 mt-3 mt-md-5">
-        <h1 class="text-center">Lista 4 - JSON</h1>
+      <h1 class="text-center">Lista 4 - JSON</h1>
 
-        <section id="section-a" class="section-questao">
-            <h2>Exercício A:</h2>
-            <div class="inputContainer">
-                <label for="vetorA">Digite números separados por espaço:</label>
-                <input type="text" id="vetorA" />
-            </div>
-            <div class="inputContainer">
-                <label for="numX">Digite o valor de X:</label>
-                <input type="text" id="numX" />
-            </div>
-            <button onclick="mostrarResultadoCalculado('a')">Calcular</button>
-            <p>Resultado:</p>
-            <pre id="resultadoA"></pre>
-        </section>
+      <div class="card mb-2 mb-md-4">
+        <h5 class="card-header">Exercício A</h5>
+        <div class="card-body">
+          <h5 class="card-title">Digite números separados por espaço:</h5>
+          <div class="input-group mb-2">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Vetor</span
+            >
+            <input
+              id="vetorA"
+              type="text"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Valor de X</span
+            >
+            <input
+              id="numX"
+              type="text"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-dark"
+            onclick="mostrarResultadoCalculado('a')"
+          >
+            Calcular Resultado
+          </button>
+        </div>
+        <div class="card-footer">
+          <h5 class="card-title pt-2">Resultado</h5>
+          <pre id="resultadoA"></pre>
+        </div>
+      </div>
 
-        <!-- Parte 'b' -->
-        <section id="section-b" class="section-questao">
-            <h2>Exercício B:</h2>
-            <div class="inputContainer">
-                <label for="numerosB">Digite números separados por espaço:</label>
-                <input type="text" id="numerosB" />
-            </div>
-            <button onclick="mostrarResultadoCalculado('b')">Calcular</button>
-            <p>Resultado:</p>
-            <pre id="resultadoB"></pre>
-        </section>
+      <!-- Parte 'b' -->
+      <div class="card mb-2 mb-md-4">
+        <h5 class="card-header">Exercício B</h5>
+        <div class="card-body">
+          <h5 class="card-title">Digite números separados por espaço:</h5>
+          <div class="input-group mb-2">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Vetor</span
+            >
+            <input
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              type="text"
+              id="numerosB"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-dark"
+            onclick="mostrarResultadoCalculado('b')"
+          >
+            Calcular Resultado
+          </button>
+        </div>
+        <div class="card-footer">
+          <h5 class="card-title pt-2">Resultado</h5>
+          <pre id="resultadoB"></pre>
+        </div>
+      </div>
 
-        <!-- Parte 'c' -->
-        <section id="section-c" class="section-questao">
-            <h2>Exercício C:</h2>
-            <div class="inputContainer">
-                <label for="notasAlunos">Digite as notas dos alunos separadas por espaço:</label>
-                <input type="text" id="notasAlunos" />
-            </div>
-            <button onclick="mostrarResultadoCalculado('c')">Calcular</button>
-            <p>Resultado:</p>
-            <pre id="resultadoC"></pre>
-        </section>
+      <!-- Parte 'c' -->
+      <div class="card mb-2 mb-md-4">
+        <h5 class="card-header">Exercício C</h5>
+        <div class="card-body">
+          <h5 class="card-title">Digite números separados por espaço:</h5>
+          <div class="input-group mb-2">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Notas dos alunos</span
+            >
+            <input
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              type="text"
+              id="notasAlunos"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-dark"
+            onclick="mostrarResultadoCalculado('c')"
+          >
+            Calcular Resultado
+          </button>
+        </div>
+        <div class="card-footer">
+          <h5 class="card-title pt-2">Resultado</h5>
+          <pre id="resultadoC"></pre>
+        </div>
+      </div>
 
-        <!-- Parte 'd' -->
-        <section id="section-d" class="section-questao">
-            <h2>Exercício D:</h2>
-            <div class="inputContainer mercadoria-container">
-                <p>Insira as informações das mercadorias:</p>
-                <div id="mercadorias-container" class="mercadoria-input-container">
-                    <!-- O campo de entrada para a primeira mercadoria -->
-                    <div id="1mercadoria" class="mercadoria">
-                        <div class="row-input-valores">
-                            <div class="input-field">
-                                <label for="valorMercadoria" class="input-label-mercadoria">Valor:</label>
-                                <input type="number" class="valorMercadoria input-mercadoria" min="1" required />
-                            </div>
-                            <div class="input-field">
-                                <label for="quantidadeMercadoria" class="input-label-mercadoria">Quantidade:</label>
-                                <input type="number" class="quantidadeMercadoria input-mercadoria" min="1" required />
-                            </div>
-                            <button id="1botaoRemover" class="removerMercadoria">Remover</button>
-                        </div>
-                    </div>
-                </div>
-                <button class="adicionarMercadoria" onclick="adicionarMercadoria()">Adicionar Mercadoria</button>
+      <!-- Parte 'd' -->
+      <div class="card mb-2 mb-md-4">
+        <h5 class="card-header">Exercício D</h5>
+        <div class="card-body">
+          <h5 class="card-title">Insira as informações das mercadorias:</h5>
+          <div id="mercadorias-container">
+            <div id="1mercadoria">
+              <div class="input-group mb-2 input-field">
+                <label
+                  id="inputGroup-sizing-default"
+                  class="input-group-text input-label-mercadoria"
+                  >Valor</label
+                >
+                <input
+                  class="form-control valorMercadoria input-mercadoria"
+                  type="number"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                  min="1"
+                  required
+                />
+                <label
+                  class="input-group-text"
+                  id="inputGroup-sizing-default"
+                  class="input-label-mercadoria"
+                  >Quantidade</label
+                >
+                <input
+                  class="form-control quantidadeMercadoria input-mercadoria"
+                  type="number"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                  min="1"
+                  required
+                />
+                <button
+                  id="1botaoRemover"
+                  class="btn btn-danger removerMercadoria"
+                >
+                  Remover
+                </button>
+              </div>
             </div>
-            <button onclick="mostrarResultadoCalculado('d')">Calcular</button>
-            <p>Resultado:</p>
-            <pre id="resultadoD"></pre>
-        </section>
+          </div>
+          <div id="containerAdicionarMercadoria" class="col-4 mb-2">
+            <button
+              class="btn btn-secondary text-nowrap adicionarMercadoria"
+              onclick="adicionarMercadoria()"
+            >
+              Adicionar Mercadoria
+            </button>
+          </div>
+          <button
+            type="button"
+            class="btn btn-dark"
+            onclick="mostrarResultadoCalculado('d')"
+          >
+            Calcular Resultado
+          </button>
+        </div>
+        <div class="card-footer">
+          <h5 class="card-title pt-2">Resultado</h5>
+          <pre id="resultadoD"></pre>
+        </div>
+      </div>
 
-        <!-- Parte 'e' -->
-        <section id="section-e" class="section-questao">
-            <h2>Exercício E:</h2>
-            <div class="inputContainer">
-                <label for="vetorV1">Digite números separados por espaço para o vetor 1:</label>
-                <input type="text" id="vetorV1" />
-            </div>
-            <div class="inputContainer">
-                <label for="vetorV2">Digite números separados por espaço para o vetor 2:</label>
-                <input type="text" id="vetorV2" />
-            </div>
-            <button onclick="mostrarResultadoCalculado('e')">Calcular</button>
-            <p>Resultado:</p>
-            <pre id="resultadoE"></pre>
-        </section>
+      <!-- Parte 'e' -->
+      <div class="card mb-2 mb-md-4">
+        <h5 class="card-header">Exercício E</h5>
+        <div class="card-body">
+          <h5 class="card-title">Digite números separados por espaço:</h5>
+          <div class="input-group mb-2">
+            <label class="input-group-text" id="inputGroup-sizing-default"
+              >Vetor 1</label
+            >
+            <input
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              type="text"
+              id="vetorV1"
+            />
+            <label class="input-group-text" id="inputGroup-sizing-default"
+              >Vetor 2</label
+            >
+            <input
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              type="text"
+              id="vetorV2"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-dark"
+            onclick="mostrarResultadoCalculado('e')"
+          >
+            Calcular Resultado
+          </button>
+        </div>
+        <div class="card-footer">
+          <h5 class="card-title pt-2">Resultado</h5>
+          <pre id="resultadoE"></pre>
+        </div>
+      </div>
     </div>
 
     <!-- Footer-->
     <footer class="py-3 bg-dark sticky-bottom">
-        <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; Pablo Vinicius 2023</p></div>
+      <div class="container px-4 px-lg-5">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; Pablo Vinicius 2023
+        </p>
+      </div>
     </footer>
 
     <!-- Bootstrap core JS-->
@@ -133,6 +265,5 @@
     <script src="../../js/scripts.js"></script>
     <!-- Scripts dos cálculos -->
     <script src="scripts.js"></script>
-</body>
-
+  </body>
 </html>
