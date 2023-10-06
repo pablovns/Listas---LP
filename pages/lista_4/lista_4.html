@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <title>Lista 4</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../pages.css" rel="stylesheet" />
 </head>
@@ -16,55 +16,30 @@
 <body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav">
-        <div class="container px-4">
-            <div class="fs-4 mb-2">
-                <a class="navbar-brand" href="../../index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-house-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
-                        <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
-                    </svg>
-                    Início
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                    class="navbar-toggler-icon"></span></button>
+        <div class="container">
+            <a class="navbar-brand mx-2" href="../../index.html">
+                Início
+            </a>
+        </div>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </nav>
 
-    <!-- Pagination -->
-    <div class="container px-12 px-lg-5 mt-lg-5">
+    <!-- Page Content -->
+    <div class="container px-12 px-lg-5 mt-3 mt-md-5">
         <h1 class="text-center">Lista 4 - JSON</h1>
-        <!-- <nav aria-label="Exercise navigation">
-            <ul id="pagination" class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span class="sr-only">Próximo</span>
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav> -->
+
         <section id="section-a" class="section-questao">
-            <h2>Parte a:</h2>
+            <h2>Exercício A:</h2>
             <div class="inputContainer">
                 <label for="vetorA">Digite números separados por espaço:</label>
                 <input type="text" id="vetorA" />
@@ -80,7 +55,7 @@
 
         <!-- Parte 'b' -->
         <section id="section-b" class="section-questao">
-            <h2>Parte b:</h2>
+            <h2>Exercício B:</h2>
             <div class="inputContainer">
                 <label for="numerosB">Digite números separados por espaço:</label>
                 <input type="text" id="numerosB" />
@@ -92,7 +67,7 @@
 
         <!-- Parte 'c' -->
         <section id="section-c" class="section-questao">
-            <h2>Parte c:</h2>
+            <h2>Exercício C:</h2>
             <div class="inputContainer">
                 <label for="notasAlunos">Digite as notas dos alunos separadas por espaço:</label>
                 <input type="text" id="notasAlunos" />
@@ -104,7 +79,7 @@
 
         <!-- Parte 'd' -->
         <section id="section-d" class="section-questao">
-            <h2>Parte d:</h2>
+            <h2>Exercício D:</h2>
             <div class="inputContainer mercadoria-container">
                 <p>Insira as informações das mercadorias:</p>
                 <div id="mercadorias-container" class="mercadoria-input-container">
@@ -132,7 +107,7 @@
 
         <!-- Parte 'e' -->
         <section id="section-e" class="section-questao">
-            <h2>Parte e:</h2>
+            <h2>Exercício E:</h2>
             <div class="inputContainer">
                 <label for="vetorV1">Digite números separados por espaço para o vetor 1:</label>
                 <input type="text" id="vetorV1" />
@@ -148,10 +123,8 @@
     </div>
 
     <!-- Footer-->
-    <footer class="py-4 bg-dark fixed-bottom">
-        <div class="container px-4 px-lg-5">
-            <p class="m-0 text-center text-white">Copyright &copy; Pablo Vinicius 2023</p>
-        </div>
+    <footer class="py-3 bg-dark sticky-bottom">
+        <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; Pablo Vinicius 2023</p></div>
     </footer>
 
     <!-- Bootstrap core JS-->
