@@ -1,122 +1,165 @@
 // Função para calcular e exibir resultadoados
 function mostrarResultadoCalculado(parte) {
-    let resultado;
-    switch (parte) {
-        case 'a':
-            const vetorA = parseTextInput(document.getElementById("vetorA").value);
-            const numX = parseFloat(document.getElementById("numX").value);
-            const vetorM = vetorA.map((num) => num * numX);
+  let resultado;
+  switch (parte) {
+    case "a":
+      const vetorA = parseTextInput(document.getElementById("vetorA").value);
+      const numX = parseFloat(document.getElementById("numX").value);
+      const vetorM = vetorA.map((num) => num * numX);
 
-            resultado = { vetorA, numX, vetorM };
-            document.getElementById("resultadoA").textContent = JSON.stringify(resultado, null, 2);
-            break;
+      resultado = { vetorA, numX, vetorM };
+      document.getElementById("resultadoA").textContent = JSON.stringify(
+        resultado,
+        null,
+        2
+      );
+      break;
 
-        case 'b':
-            const numerosB = parseTextInput(document.getElementById("numerosB").value);
+    case "b":
+      const numerosB = parseTextInput(
+        document.getElementById("numerosB").value
+      );
 
-            // Criar uma cópia do array original
-            const arrayRevertido = [...numerosB];
+      // Criar uma cópia do array original
+      const arrayRevertido = [...numerosB];
 
-            // Reverter a cópia
-            arrayRevertido.reverse();
+      // Reverter a cópia
+      arrayRevertido.reverse();
 
-            resultado = { numerosB, arrayRevertido };
-            document.getElementById("resultadoB").textContent = JSON.stringify(resultado, null, 2);
-            break;
+      resultado = { numerosB, arrayRevertido };
+      document.getElementById("resultadoB").textContent = JSON.stringify(
+        resultado,
+        null,
+        2
+      );
+      break;
 
-        case 'c':
-            const notasAlunos = parseTextInput(document.getElementById("notasAlunos").value);
-            const notaMedia = calcularMedia(notasAlunos);
-            const acimaMedia = contarAcimaMedia(notasAlunos, notaMedia);
+    case "c":
+      const notasAlunos = parseTextInput(
+        document.getElementById("notasAlunos").value
+      );
+      const notaMedia = calcularMedia(notasAlunos);
+      const acimaMedia = contarAcimaMedia(notasAlunos, notaMedia);
 
-            resultado = { notaMedia, acimaMedia };
-            document.getElementById("resultadoC").textContent = JSON.stringify(resultado, null, 2);
-            break;
+      resultado = { notaMedia, acimaMedia };
+      document.getElementById("resultadoC").textContent = JSON.stringify(
+        resultado,
+        null,
+        2
+      );
+      break;
 
-        case 'd':
-            const valorMercadoriasInputs = document.querySelectorAll(".valorMercadoria");
-            const quantidadeMercadoriasInputs = document.querySelectorAll(".quantidadeMercadoria");
-            const valorMercadorias = [];
-            const quantidadeMercadorias = [];
+    case "d":
+      const valorMercadoriasInputs =
+        document.querySelectorAll(".valorMercadoria");
+      const quantidadeMercadoriasInputs = document.querySelectorAll(
+        ".quantidadeMercadoria"
+      );
+      const valorMercadorias = [];
+      const quantidadeMercadorias = [];
 
-            valorMercadoriasInputs.forEach(input => valorMercadorias.push(parseFloat(input.value)));
-            quantidadeMercadoriasInputs.forEach(input => quantidadeMercadorias.push(parseInt(input.value)));
+      valorMercadoriasInputs.forEach((input) =>
+        valorMercadorias.push(parseFloat(input.value))
+      );
+      quantidadeMercadoriasInputs.forEach((input) =>
+        quantidadeMercadorias.push(parseInt(input.value))
+      );
 
-            const valorTotalEstoque = calcularValorTotalEstoque(valorMercadorias, quantidadeMercadorias);
-            const valorMedioMercadorias = calcularValorMedioMercadorias(valorMercadorias);
+      const valorTotalEstoque = calcularValorTotalEstoque(
+        valorMercadorias,
+        quantidadeMercadorias
+      );
+      const valorMedioMercadorias =
+        calcularValorMedioMercadorias(valorMercadorias);
 
-            resultado = { valorTotalEstoque, valorMedioMercadorias };
-            document.getElementById("resultadoD").textContent = JSON.stringify(resultado, null, 2);
-            break;
+      resultado = { valorTotalEstoque, valorMedioMercadorias };
+      document.getElementById("resultadoD").textContent = JSON.stringify(
+        resultado,
+        null,
+        2
+      );
+      break;
 
-        case 'e':
-            const vetorV1 = parseTextInput(document.getElementById("vetorV1").value);
-            const vetorV2 = parseTextInput(document.getElementById("vetorV2").value);
-            const mesmoNumeroEPosicao = contarMesmoNumeroEPosicao(vetorV1, vetorV2);
+    case "e":
+      const vetorV1 = parseTextInput(document.getElementById("vetorV1").value);
+      const vetorV2 = parseTextInput(document.getElementById("vetorV2").value);
+      const mesmoNumeroEPosicao = contarMesmoNumeroEPosicao(vetorV1, vetorV2);
 
-            resultado = { mesmoNumeroEPosicao };
-            document.getElementById("resultadoE").textContent = JSON.stringify(resultado, null, 2);
-            break;
+      resultado = { mesmoNumeroEPosicao };
+      document.getElementById("resultadoE").textContent = JSON.stringify(
+        resultado,
+        null,
+        2
+      );
+      break;
 
-        default:
-            break;
-    }
+    default:
+      break;
+  }
 }
 
 // Função auxiliar para analisar a entrada de texto em formato de vetor
 function parseTextInput(input) {
-    return input.split(" ").filter(item => item !== "").map((item) => parseFloat(item.trim()));
+  return input
+    .split(" ")
+    .filter((item) => item !== "")
+    .map((item) => parseFloat(item.trim()));
 }
 
 // Função auxiliar para calcular a média
 function calcularMedia(array) {
-    const sum = array.reduce((total, num) => total + num, 0);
-    return sum / array.length;
+  const sum = array.reduce((total, num) => total + num, 0);
+  return sum / array.length;
 }
 
 // Função auxiliar para contar quantos números estão acima da média
 function contarAcimaMedia(array, average) {
-    return array.filter(num => num > average).length;
+  return array.filter((num) => num > average).length;
 }
 
 // Função auxiliar para contar quantos números são iguais e estão na mesma posição
 function contarMesmoNumeroEPosicao(array1, array2) {
-    return array1.reduce((count, num, index) => count + (num === array2[index] ? 1 : 0), 0);
+  return array1.reduce(
+    (count, num, index) => count + (num === array2[index] ? 1 : 0),
+    0
+  );
 }
 
 // Função para adicionar campos de entrada para mais uma mercadoria
 function adicionarMercadoria() {
-    const mercadoriasContainer = document.getElementById("mercadorias-container");
-    const novaMercadoria = document.createElement("div");
-    novaMercadoria.className = "mercadoria";
-    novaMercadoria.innerHTML = mercadoria1.innerHTML; // pega o código html todo da primeira mercadoria para depois duplicar
-    mercadoriasContainer.appendChild(novaMercadoria);
+  const mercadoriasContainer = document.getElementById("mercadorias-container");
+  const novaMercadoria = document.createElement("div");
+  novaMercadoria.className = "mercadoria";
+  novaMercadoria.innerHTML = mercadoria1.innerHTML; // pega o código html todo da primeira mercadoria para depois duplicar
+  mercadoriasContainer.appendChild(novaMercadoria);
 
-    // Adicionar um ouvinte de evento ao botão de remoção para a nova mercadoria
-    const botaoRemover = novaMercadoria.querySelector(".removerMercadoria");
-    botaoRemover.addEventListener("click", () => removerMercadoria(novaMercadoria));
+  // Adicionar um ouvinte de evento ao botão de remoção para a nova mercadoria
+  const botaoRemover = novaMercadoria.querySelector(".removerMercadoria");
+  botaoRemover.addEventListener("click", () =>
+    removerMercadoria(novaMercadoria)
+  );
 }
 
 // Função para remover uma mercadoria
 function removerMercadoria(mercadoriaElement) {
-    mercadoriaElement.remove();
+  mercadoriaElement.remove();
 }
 
 // Função auxiliar para calcular o valor total do estoque
 function calcularValorTotalEstoque(valores, quantidades) {
-    let total = 0;
-    for (let i = 0; i < valores.length; i++) {
-        total += valores[i] * quantidades[i];
-    }
-    return total;
+  let total = 0;
+  for (let i = 0; i < valores.length; i++) {
+    total += valores[i] * quantidades[i];
+  }
+  return total;
 }
 
 // Função auxiliar para calcular o valor médio das mercadorias
 function calcularValorMedioMercadorias(valores) {
-    const totalValores = valores.reduce((sum, valor) => sum + valor, 0);
-    return totalValores / valores.length;
+  const totalValores = valores.reduce((sum, valor) => sum + valor, 0);
+  return totalValores / valores.length;
 }
 
 const mercadoria1 = document.getElementById("1mercadoria");
 const botaoRemover1 = document.getElementById("1botaoRemover");
-botaoRemover1.addEventListener("click", () => removerMercadoria(mercadoria1));  
+botaoRemover1.addEventListener("click", () => removerMercadoria(mercadoria1));
