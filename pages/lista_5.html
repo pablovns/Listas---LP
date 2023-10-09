@@ -91,8 +91,8 @@
                   <span class="input-group-text" id="inputGroup-sizing-default">
                     Digite dois números
                   </span>
-                  <input id="p1-ex1-input1" type="number" class="form-control" />
-                  <input id="p1-ex1-input2" type="number" class="form-control" />
+                  <input id="p1-ex1-input1" type="number" class="form-control" required/>
+                  <input id="p1-ex1-input2" type="number" class="form-control" required/>
                 </div>
                 <button type="submit" class="btn btn-dark">
                   Calcular Resultado
@@ -113,7 +113,7 @@
                   <span class="input-group-text" id="inputGroup-sizing-default">
                     Informe um número
                   </span>
-                  <input id="p1-ex2-input1" type="number" class="form-control" />
+                  <input id="p1-ex2-input1" type="number" class="form-control" required/>
                 </div>
                 <button type="submit" class="btn btn-dark">
                   Calcular Resultado
@@ -140,6 +140,7 @@
                     class="form-control"
                     minlength="1"
                     maxlength="1"
+                    required
                   />
                 </div>
                 <button type="submit" class="btn btn-dark">
@@ -154,6 +155,7 @@
           </div>
         </div>
       </div>
+      <script type="module" src="../js/lista_5/P1.js"></script>
 
       <!-- Parte 2 -->
       <div class="container px-0">
@@ -168,11 +170,17 @@
               <form id="p2-ex1">
                 <div class="input-group mb-2">
                   <span class="input-group-text" id="inputGroup-sizing-default"> Nome de usuário </span>
-                  <input id="p3-ex1-input1" type="" class="form-control" />
+                  <input id="p2-ex1-input1" type="text" class="form-control" required/>
                 </div>
                 <div class="input-group mb-2">
                   <span class="input-group-text" id="inputGroup-sizing-default"> Senha </span>
-                  <input id="p3-ex1-input2" type="password" class="form-control" />
+                  <input id="p2-ex1-input2" type="password" class="form-control" aria-describedby="p2-ex1-input2Feedback" required/>
+                  <div id="p2-ex1-input2Feedback" class="invalid-feedback">
+                    Sua senha não pode ser igual ao seu nome de usuário.
+                  </div>
+                  <div class="valid-feedback">
+                    Senha válida!
+                  </div>
                 </div>
                 <button type="submit" class="btn btn-dark">
                   Calcular Resultado
@@ -187,6 +195,7 @@
           <!-- Ex 2 -->
         </div>
       </div>
+      <script type="module" src="../js/lista_5/P2.js"></script>
 
       <!-- Parte 3 -->
       <div class="container px-0">
@@ -197,6 +206,10 @@
             <h5 class="card-header">Exercício 1</h5>
             <div class="card-body">
               <form id="p3-ex1">
+                <div class="input-group mb-2">
+                  <span class="input-group-text" id="inputGroup-sizing-default"> Digite um vetor </span>
+                  <input id="p3-ex1-input1" type="text" class="form-control" required/>
+                </div>
                 <button type="submit" class="btn btn-dark">
                   Calcular Resultado
                 </button>
@@ -211,6 +224,7 @@
         </div>
       </div>
     </div>
+    <script type="module" src="../js/lista_5/P3.js"></script>
 
     <!-- Footer-->
     <footer class="py-3 mt-3 bg-dark fixed-md-bottom">
@@ -224,6 +238,6 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Scripts dos cálculos -->
-    <script src="../js/lista_5.js"></script>
+    <script type="module" src="../js/scripts.js"></script>
   </body>
 </html>
