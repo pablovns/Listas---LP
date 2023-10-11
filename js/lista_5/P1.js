@@ -57,7 +57,7 @@ document.getElementById("p1-ex3").addEventListener("submit", (e) => {
 
     resultado() {
       let resultado = document.getElementById("p1-ex3-resultado");
-      resultado.textContent = this.sexo;
+      resultado.textContent = `Sexo ${this.sexo}`;
     }
   }
 
