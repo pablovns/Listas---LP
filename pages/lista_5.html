@@ -88,7 +88,7 @@
             <div class="card-body">
               <form id="p1-ex1">
                 <div class="input-group mb-2">
-                  <span class="input-group-text" id="inputGroup-sizing-default">
+                  <span class="input-group-text">
                     Digite dois números
                   </span>
                   <input id="p1-ex1-input1" type="number" class="form-control" required/>
@@ -110,7 +110,7 @@
             <div class="card-body">
               <form id="p1-ex2">
                 <div class="input-group mb-2">
-                  <span class="input-group-text" id="inputGroup-sizing-default">
+                  <span class="input-group-text">
                     Informe um número
                   </span>
                   <input id="p1-ex2-input1" type="number" class="form-control" required/>
@@ -131,7 +131,7 @@
             <div class="card-body">
               <form id="p1-ex3">
                 <div class="input-group mb-2">
-                  <span class="input-group-text" id="inputGroup-sizing-default">
+                  <span class="input-group-text">
                     Insira o sexo (F ou M)
                   </span>
                   <input
@@ -169,21 +169,18 @@
             <div class="card-body">
               <form id="p2-ex1">
                 <div class="input-group mb-2">
-                  <span class="input-group-text" id="inputGroup-sizing-default"> Nome de usuário </span>
+                  <span class="input-group-text"> Nome de usuário </span>
                   <input id="p2-ex1-input1" type="text" class="form-control" required/>
                 </div>
-                <div class="input-group mb-2">
-                  <span class="input-group-text" id="inputGroup-sizing-default"> Senha </span>
+                <div class="input-group mb-2 has-validation">
+                  <span class="input-group-text"> Senha </span>
                   <input id="p2-ex1-input2" type="password" class="form-control" aria-describedby="p2-ex1-input2Feedback" required/>
                   <div id="p2-ex1-input2Feedback" class="invalid-feedback">
                     Sua senha não pode ser igual ao seu nome de usuário.
                   </div>
-                  <div class="valid-feedback">
-                    Senha válida!
-                  </div>
                 </div>
                 <button type="submit" class="btn btn-dark">
-                  Calcular Resultado
+                  Cadastrar
                 </button>
               </form>
             </div>
@@ -193,6 +190,67 @@
             </div>
           </div>
           <!-- Ex 2 -->
+          <div class="card mb-md-4">
+            <h5 class="card-header">Exercício 2</h5>
+            <div class="card-body">
+              <form id="p2-ex2" novalidate>
+                <div class="input-group mb-2 has-validation">
+                  <span class="input-group-text"> Nome </span>
+                  <input id="p2-ex2-input1" type="text" class="form-control is-invalid" aria-describedby="p2-ex2-input1Feedback" required/>
+                  <div id="p2-ex2-input2Feedback" class="invalid-feedback">
+                    O nome deve conter 3 ou mais caracteres.
+                  </div>
+                </div>
+                <div class="input-group mb-2 has-validation">
+                  <span class="input-group-text"> Idade </span>
+                  <input id="p2-ex2-input2" type="number" min="0" class="form-control is-invalid" aria-describedby="p2-ex2-input2Feedback" required/>
+                  <div id="p2-ex2-input2Feedback" class="invalid-feedback">
+                    A idade deve ser maior que 0 e menor que 150.
+                  </div>
+                </div>
+                <div class="input-group mb-2 has-validation">
+                  <span class="input-group-text"> Salário </span>
+                  <input id="p2-ex2-input3" type="number" class="form-control is-invalid" aria-describedby="p2-ex2-input3Feedback" required/>
+                  <div id="p2-ex2-input3Feedback" class="invalid-feedback">
+                    O salário deve ser maior que 0.
+                  </div>
+                </div>
+                <div class="input-group mb-2 has-validation">
+                  <label class="input-group-text" for="p2-ex2-input4"> Sexo </label>
+                  <select class="form-select is-invalid" id="p2-ex2-input4">
+                    <option selected>Selecione uma opção...</option>
+                    <option value="1">Masculino</option>
+                    <option value="2">Feminino</option>
+                    <option value="3">Prefiro não informar</option>
+                  </select>
+                  <div id="p2-ex2-input4Feedback" class="invalid-feedback">
+                    Selecione uma opção.
+                  </div>
+                </div>
+                <div class="input-group mb-2 has-validation">
+                  <label class="input-group-text" for="p2-ex2-input4"> Estado Civil </label>
+                  <select class="form-select is-invalid" id="p2-ex2-input5">
+                    <option selected>Selecione uma opção...</option>
+                    <option value="1">Solteiro (a) </option>
+                    <option value="2">Casado (a) </option>
+                    <option value="3">Viúvo (a) </option>
+                    <option value="4">Divorciado (a) </option>
+                    <option value="5">Prefiro não informar</option>
+                  </select>
+                  <div id="p2-ex2-input4Feedback" class="invalid-feedback">
+                    Selecione uma opção.
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-dark">
+                  Cadastrar
+                </button>
+              </form>
+            </div>
+            <div class="card-footer footer-resultado">
+              <h5 class="card-title">Resultado</h5>
+              <p id="p2-ex2-resultado" class="m-0"></p>
+            </div>
+          </div>
         </div>
       </div>
       <script type="module" src="../js/lista_5/P2.js"></script>
@@ -207,7 +265,7 @@
             <div class="card-body">
               <form id="p3-ex1">
                 <div class="input-group mb-2">
-                  <span class="input-group-text" id="inputGroup-sizing-default"> Digite um vetor </span>
+                  <span class="input-group-text"> Digite um vetor </span>
                   <input id="p3-ex1-input1" type="text" class="form-control" required/>
                 </div>
                 <button type="submit" class="btn btn-dark">
