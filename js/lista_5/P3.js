@@ -1,5 +1,5 @@
 // Vetores
-import { parseTextInput } from "../scripts.js";
+import { parseTextInput } from "../index.js";
 
 document.getElementById("p3-ex1").addEventListener("submit", (e) => {
   e.preventDefault();
